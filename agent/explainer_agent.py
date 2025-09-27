@@ -2,7 +2,9 @@ from agents import Agent
 
 
 class ExplainerAgent(Agent):
-    def explain(self, eligibility_result):
-        # explanation = f"You qualify for the housing support because your monthly income is within the limit."
-        self.eligibility_result = eligibility_result
-        return eligibility_result
+    def explain(self, is_eligible):
+        if is_eligible:
+            explanation = "You qualify for the program based on your income and district eligibility."
+        else:
+            explanation = "You do not qualify for the program due to certain eligibility criteria."
+        return explanation

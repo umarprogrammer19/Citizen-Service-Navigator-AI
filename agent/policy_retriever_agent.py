@@ -1,35 +1,40 @@
 import requests
 from agents import Agent
+from PyPDF2 import PdfReader  # Python PDF library for PDF parsing
 
 
 class PolicyRetrieverAgent(Agent):
     def retrieve_policy(self, url):
         try:
-            # Send GET request to fetch policy data
+            # Fetch PDF or other policy documents
             response = requests.get(url)
 
-            # Check if the response status code is 200 (OK)
             if response.status_code == 200:
-                try:
-                    # Attempt to parse the JSON response
-                    policy_data = response.json()
-                    if policy_data:  # Ensure the response is not empty
-                        return policy_data
-                    else:
-                        print(f"Error: The response from {url} is empty.")
+                # If it's a PDF, parse it
+                if url.endswith(".pdf"):
+                    policy_data = self.parse_pdf(response.content)
+                    return policy_data
+                else:
+                    # If it's JSON or another format, try parsing
+                    try:
+                        return response.json()
+                    except ValueError:
+                        print(f"Error: Response from {url} is not valid JSON.")
                         return None
-                except ValueError:
-                    # Handle case where the response is not valid JSON
-                    print(f"Error: Response from {url} is not valid JSON.")
-                    return None
             else:
                 print(
                     f"Error: Failed to retrieve data from {url}, Status Code: {response.status_code}"
                 )
                 return None
         except requests.exceptions.RequestException as e:
-            # Catch and log any network-related errors
             print(
                 f"Error: Network error occurred while fetching the policy data. {str(e)}"
             )
             return None
+
+    def parse_pdf(self, pdf_content):
+        reader = PdfReader(pdf_content)
+        text = ""
+        for page in reader.pages:
+            text += page.extract_text()
+        return text

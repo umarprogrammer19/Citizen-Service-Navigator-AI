@@ -7,41 +7,34 @@ from agent.explainer_agent import ExplainerAgent
 
 class OrchestratorAgent(Agent):
     def orchestrate(self, citizen_data):
-        # Orchestrate agents to handle citizen eligibility, form filling, and explanation
-        policy_agent = PolicyRetrieverAgent(name="PolicyRetriever Agent")
+        # Step 1: Retrieve Policy
+        policy_agent = PolicyRetrieverAgent()
+        rules = policy_agent.retrieve_policy(
+            "https://zakat.punjab.gov.pk/forms"
+        ) 
 
-        # Retrieve eligibility rules, with fallback if None
-        rules = policy_agent.retrieve_policy("https://example.com/eligibility_policy")
         if not rules:
             print("Warning: Using fallback eligibility rules due to retrieval failure.")
-            rules = {
-                "program_id": "housing_support_lahore_2025",
-                "eligibility": [
-                    {"field": "monthly_income", "op": "<=", "value": 50000},
-                    {
-                        "field": "district",
-                        "op": "in",
-                        "value": ["Lahore", "Sheikhupura"],
-                    },
-                    {"field": "household_size", "op": ">=", "value": 2},
-                ],
-                "required_docs": ["CNIC", "utility bill copy", "income certificate"],
-                "form_url": "https://example.com/form",
-            }
+            rules = [
+                {"field": "monthly_income", "op": "<=", "value": 50000},
+                {"field": "district", "op": "in", "value": ["Lahore", "Sheikhupura"]},
+                {"field": "household_size", "op": ">=", "value": 2},
+            ]
 
-        eligibility_agent = EligibilityEvaluatorAgent(name="Eligibility Evaluator Agent")
+        # Step 2: Evaluate Eligibility
+        eligibility_agent = EligibilityEvaluatorAgent()
         is_eligible = eligibility_agent.evaluate_eligibility(citizen_data, rules)
 
-        if is_eligible:
-            form_agent = FormFillerAgent(name="Form Filler Agent")
-            filled_form = form_agent.fill_form(citizen_data)
+        # Step 3: Fill Forms if Eligible
+        form_agent = FormFillerAgent()
+        filled_form = form_agent.fill_form(citizen_data) if is_eligible else None
 
-            explainer_agent = ExplainerAgent("Explainer Agent")
-            explanation = explainer_agent.explain(is_eligible)
-            return {
-                "eligibility": "Eligible",
-                "form": filled_form,
-                "explanation": explanation,
-            }
+        # Step 4: Provide Explanation
+        explainer_agent = ExplainerAgent()
+        explanation = explainer_agent.explain(is_eligible)
 
-        return {"eligibility": "Not Eligible"}
+        return {
+            "eligibility": "Eligible" if is_eligible else "Not Eligible",
+            "form": filled_form,
+            "explanation": explanation,
+        }
