@@ -2,6 +2,7 @@ from agents import Agent
 
 
 class ExplainerAgent(Agent):
-    def explain_eligibility(self, citizen_data):
-        explanation = f"Based on your income of {citizen_data['monthly_income']}, you are eligible for housing support."
-        return explanation
+    def explain(self, eligibility_result):
+        # explanation = f"You qualify for the housing support because your monthly income is within the limit."
+        self.eligibility_result = eligibility_result
+        return eligibility_result
