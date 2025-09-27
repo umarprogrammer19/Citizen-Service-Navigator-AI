@@ -13,6 +13,7 @@ dependencies = [
     "motor>=3.7.1",
     "openai-agents>=0.3.2",
     "passlib[bcrypt]>=1.7.4",
+    "pdfkit>=1.0.0",
     "pydantic>=2.11.9",
     "python-jose>=3.5.0",
 ]

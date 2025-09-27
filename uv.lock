@@ -161,6 +161,7 @@ dependencies = [
     { name = "motor" },
     { name = "openai-agents" },
     { name = "passlib", extra = ["bcrypt"] },
+    { name = "pdfkit" },
     { name = "pydantic" },
     { name = "python-jose" },
 ]
@@ -175,6 +176,7 @@ requires-dist = [
     { name = "motor", specifier = ">=3.7.1" },
     { name = "openai-agents", specifier = ">=0.3.2" },
     { name = "passlib", extras = ["bcrypt"], specifier = ">=1.7.4" },
+    { name = "pdfkit", specifier = ">=1.0.0" },
     { name = "pydantic", specifier = ">=2.11.9" },
     { name = "python-jose", specifier = ">=3.5.0" },
 ]
@@ -562,6 +564,15 @@ wheels = [
 [package.optional-dependencies]
 bcrypt = [
     { name = "bcrypt" },
+]
+
+[[package]]
+name = "pdfkit"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/bb/6ddc62b4622776a6514fd749041c2b4bccd343e006d00de590f8090ac8b1/pdfkit-1.0.0.tar.gz", hash = "sha256:992f821e1e18fc8a0e701ecae24b51a2d598296a180caee0a24c0af181da02a9", size = 13288 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/64/1b/26c080096dd93936dccfd32c682bed3d5630a84aae9d493ff68afb2ae0fb/pdfkit-1.0.0-py3-none-any.whl", hash = "sha256:a7a4ca0d978e44fa8310c4909f087052430a6e8e0b1dd7ceef657f139789f96f", size = 12099 },
 ]
 
 [[package]]
