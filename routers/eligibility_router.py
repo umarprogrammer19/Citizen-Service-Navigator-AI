@@ -7,7 +7,7 @@ router = APIRouter()
 
 @router.post("/check-eligibility")
 async def check_eligibility(citizen_data: Citizen):
-    orchestrator_agent = OrchestratorAgent(name="Orchestrator")
+    orchestrator_agent = OrchestratorAgent(name="Orchestrator Agent")
     result = orchestrator_agent.orchestrate(citizen_data.dict())
 
     if result["eligibility"] == "Not Eligible":
