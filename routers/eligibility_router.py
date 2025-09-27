@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from models.citizen import Citizen
 from agent.orchestrator import OrchestratorAgent
-from database import db
 
 router = APIRouter()
 
