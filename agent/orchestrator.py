@@ -8,7 +8,7 @@ from agent.explainer_agent import ExplainerAgent
 class OrchestratorAgent(Agent):
     def orchestrate(self, citizen_data):
         # Orchestrate agents to handle citizen eligibility, form filling, and explanation
-        policy_agent = PolicyRetrieverAgent()
+        policy_agent = PolicyRetrieverAgent(name="Policy Retriver Agent")
         rules = policy_agent.retrieve_policy("https://example.com/eligibility_policy")
 
         eligibility_agent = EligibilityEvaluatorAgent()
