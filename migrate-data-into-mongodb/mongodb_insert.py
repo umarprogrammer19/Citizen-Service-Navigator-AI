@@ -1,13 +1,14 @@
 import json
 from pymongo import MongoClient
+import os
 
-# MongoDB connection URI (replace this with your connection string)
-MONGODB_URI = "mongodb+srv://umarofficial0121_db_user:Ugsofficial190807@cluster0.rejq5v4.mongodb.net/"  
+MONGODB_URL = os.environ.get("MONGODB_URL")
 
-# Connect to MongoDB
-client = MongoClient(MONGODB_URI)
+if not MONGODB_URL:
+    raise KeyError("MONGODB_URL is not set")
 
-# Create or connect to the database
+client = MongoClient(MONGODB_URL)
+
 db = client["citizen_service_db"]
 
 # Create collections for citizen data, services, and messages
