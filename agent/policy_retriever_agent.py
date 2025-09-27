@@ -13,9 +13,13 @@ class PolicyRetrieverAgent(Agent):
                 try:
                     # Attempt to parse the JSON response
                     policy_data = response.json()
-                    return policy_data
+                    if policy_data:  # Ensure the response is not empty
+                        return policy_data
+                    else:
+                        print(f"Error: The response from {url} is empty.")
+                        return None
                 except ValueError:
-                    # Handle case where the response is not JSON
+                    # Handle case where the response is not valid JSON
                     print(f"Error: Response from {url} is not valid JSON.")
                     return None
             else:
