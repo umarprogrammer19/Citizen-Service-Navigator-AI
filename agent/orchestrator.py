@@ -26,7 +26,7 @@ class OrchestratorAgent(Agent):
         is_eligible = eligibility_agent.evaluate_eligibility(citizen_data, rules)
 
         # Step 3: Fill Forms if Eligible
-        form_agent = FormFillerAgent(name="Form Filler Agent")
+        form_agent = FormFillerAgent()
         filled_form = form_agent.fill_form(citizen_data) if is_eligible else None
 
         # Step 4: Provide Explanation
