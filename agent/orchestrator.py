@@ -11,14 +11,14 @@ class OrchestratorAgent(Agent):
         policy_agent = PolicyRetrieverAgent(name="Policy Retriver Agent")
         rules = policy_agent.retrieve_policy("https://example.com/eligibility_policy")
 
-        eligibility_agent = EligibilityEvaluatorAgent()
+        eligibility_agent = EligibilityEvaluatorAgent(name="Eligibility Evaluator Agent")
         is_eligible = eligibility_agent.evaluate_eligibility(citizen_data, rules)
 
         if is_eligible:
-            form_agent = FormFillerAgent()
+            form_agent = FormFillerAgent(name="FormFiller Agent")
             filled_form = form_agent.fill_form(citizen_data)
 
-            explainer_agent = ExplainerAgent()
+            explainer_agent = ExplainerAgent("Explainer Agent")
             explanation = explainer_agent.explain(is_eligible)
             return {
                 "eligibility": "Eligible",
