@@ -1,0 +1,322 @@
+[
+  {
+    "case_id": "C-0001",
+    "citizen_id": "2175",
+    "request_text": "I recently bought a plot and need to transfer the land ownership to my name.",
+    "request_type": "Land Transfer",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Arif Malik",
+      "age": 8,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "arif.malik@example123.com",
+        "phone": "+923416290756"
+      }
+    }
+  },
+  {
+    "case_id": "C-0002",
+    "citizen_id": "2105",
+    "request_text": "I purchased a second-hand car and need to register it under my name.",
+    "request_type": "Vehicle Registration",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Waqar Qureshi",
+      "age": 72,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "waqar.qureshi@example123.com",
+        "phone": "+923296757951"
+      }
+    }
+  },
+  {
+    "case_id": "C-0003",
+    "citizen_id": "2149",
+    "request_text": "My driving license has expired and I need to renew it.",
+    "request_type": "Driving License Renewal",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Lubna Malik",
+      "age": 76,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "lubna.malik@example123.com",
+        "phone": "+923757001765"
+      }
+    }
+  },
+  {
+    "case_id": "C-0004",
+    "citizen_id": "2019",
+    "request_text": "I need to obtain a birth certificate for my newborn child.",
+    "request_type": "Birth Certificate",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Reshma Iftikhar",
+      "age": 68,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "reshma.iftikhar@example123.com",
+        "phone": "+923651355945"
+      }
+    }
+  },
+  {
+    "case_id": "C-0005",
+    "citizen_id": "2174",
+    "request_text": "We recently got married and need to register our marriage at the Union Council.",
+    "request_type": "Marriage Registration",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Salman Dar",
+      "age": 73,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "salman.dar@example123.com",
+        "phone": "+923925673020"
+      }
+    }
+  },
+  {
+    "case_id": "C-0006",
+    "citizen_id": "2121",
+    "request_text": "My father passed away last month and I need to obtain his death certificate.",
+    "request_type": "Death Certificate",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Tania Shah",
+      "age": 67,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "tania.shah@example123.com",
+        "phone": "+923785487443"
+      }
+    }
+  },
+  {
+    "case_id": "C-0007",
+    "citizen_id": "2037",
+    "request_text": "I built a new house and need to apply for a new electricity connection.",
+    "request_type": "Electricity Connection",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Ahmed Iftikhar",
+      "age": 45,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "ahmed.iftikhar@example123.com",
+        "phone": "+923577262580"
+      }
+    }
+  },
+  {
+    "case_id": "C-0008",
+    "citizen_id": "2114",
+    "request_text": "We have shifted to a new house and need to apply for a gas connection.",
+    "request_type": "Gas Connection",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Hina Chaudhry",
+      "age": 8,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "hina.chaudhry@example123.com",
+        "phone": "+923368235820"
+      }
+    }
+  },
+  {
+    "case_id": "C-0009",
+    "citizen_id": "2149",
+    "request_text": "I need a new WASA water supply connection for my residence.",
+    "request_type": "Water Connection",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Lubna Malik",
+      "age": 76,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "lubna.malik@example123.com",
+        "phone": "+923184002504"
+      }
+    }
+  },
+  {
+    "case_id": "C-0010",
+    "citizen_id": "2086",
+    "request_text": "I am retired and would like to apply for the senior citizen pension scheme.",
+    "request_type": "Pension Scheme",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Ahmed Raza",
+      "age": 39,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "ahmed.raza@example123.com",
+        "phone": "+923413232886"
+      }
+    }
+  },
+  {
+    "case_id": "C-0011",
+    "citizen_id": "2009",
+    "request_text": "My son is a university student, and I want to apply for a need-based scholarship for him.",
+    "request_type": "Scholarship",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Khadija Chaudhry",
+      "age": 51,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "khadija.chaudhry@example123.com",
+        "phone": "+923643898786"
+      }
+    }
+  },
+  {
+    "case_id": "C-0012",
+    "citizen_id": "2066",
+    "request_text": "I run a small shop and want to apply for a microfinance loan to expand my business.",
+    "request_type": "Microfinance Loan",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Areeba Siddiqui",
+      "age": 26,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "areeba.siddiqui@example123.com",
+        "phone": "+923559377186"
+      }
+    }
+  },
+  {
+    "case_id": "C-0013",
+    "citizen_id": "2015",
+    "request_text": "I am interested in joining the Women Empowerment Skill Program for vocational training.",
+    "request_type": "Women Skill Program",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Amir Qureshi",
+      "age": 27,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "amir.qureshi@example123.com",
+        "phone": "+923211667279"
+      }
+    }
+  },
+  {
+    "case_id": "C-0014",
+    "citizen_id": "2011",
+    "request_text": "My CNIC is about to expire and I want to renew it as a Smart CNIC.",
+    "request_type": "CNIC Renewal",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Yasir Siddiqui",
+      "age": 54,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "yasir.siddiqui@example123.com",
+        "phone": "+923274383071"
+      }
+    }
+  },
+  {
+    "case_id": "C-0015",
+    "citizen_id": "2043",
+    "request_text": "I want to enroll in the Digital Literacy Training Program for basic IT skills.",
+    "request_type": "Digital Literacy Training",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Irfan Javed",
+      "age": 22,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "irfan.javed@example123.com",
+        "phone": "+923414941196"
+      }
+    }
+  },
+  {
+    "case_id": "C-0016",
+    "citizen_id": "2114",
+    "request_text": "I need a police character certificate for applying for a job abroad.",
+    "request_type": "Police Character Certificate",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Hina Chaudhry",
+      "age": 8,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "hina.chaudhry@example123.com",
+        "phone": "+923574983445"
+      }
+    }
+  },
+  {
+    "case_id": "C-0017",
+    "citizen_id": "2112",
+    "request_text": "I want to register my new small business officially under SECP.",
+    "request_type": "Business Registration",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Ahmed Butt",
+      "age": 48,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "ahmed.butt@example123.com",
+        "phone": "+923260959943"
+      }
+    }
+  },
+  {
+    "case_id": "C-0018",
+    "citizen_id": "2199",
+    "request_text": "I am a university student and want to apply for a discounted bus concession pass.",
+    "request_type": "Bus Concession",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Amber Ahmed",
+      "age": 27,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "amber.ahmed@example123.com",
+        "phone": "+923690657541"
+      }
+    }
+  },
+  {
+    "case_id": "C-0019",
+    "citizen_id": "2033",
+    "request_text": "I have a pending case and want to track its progress online.",
+    "request_type": "E-Court Tracking",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Komal Sheikh",
+      "age": 11,
+      "location": "Rural, Pakistan",
+      "contact_info": {
+        "email": "komal.sheikh@example123.com",
+        "phone": "+923445648398"
+      }
+    }
+  },
+  {
+    "case_id": "C-0020",
+    "citizen_id": "2156",
+    "request_text": "I am planning to start a small factory and need an environmental clearance permit.",
+    "request_type": "Environmental Permit",
+    "timestamp": "2025-09-23T09:00:00Z",
+    "citizen_profile": {
+      "full_name": "Shahid Ansari",
+      "age": 37,
+      "location": "Urban, Pakistan",
+      "contact_info": {
+        "email": "shahid.ansari@example123.com",
+        "phone": "+923919332606"
+      }
+    }
+  }
+]

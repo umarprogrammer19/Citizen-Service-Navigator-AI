@@ -1,0 +1,529 @@
+[
+  {
+    "service_id": "LND-RG-004",
+    "service_name": "Land Record Digitization Service",
+    "description": "Provides certified digital copies of land ownership and property documents.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "land_ownership": "Registered owner"
+    },
+    "required_documents": [
+      "Original CNIC",
+      "Property registration deed",
+      "Recent utility bill as address proof"
+    ],
+    "application_process_steps": [
+      "Step 1: Visit Punjab Land Records Authority (PLRA) office or online portal.",
+      "Step 2: Submit CNIC and property details.",
+      "Step 3: Collect certified digital land record extract."
+    ]
+  },
+  {
+    "service_id": "FIN-ZK-005",
+    "service_name": "Zakat & Ushr Assistance",
+    "description": "Financial support for low-income families through zakat distribution.",
+    "eligibility_criteria": {
+      "income_per_month_pkr": {
+        "max": 20000
+      },
+      "family_status": "Below poverty line",
+      "citizenship_status": "Pakistani National"
+    },
+    "required_documents": [
+      "CNIC",
+      "Local Union Council poverty certificate",
+      "Recommendation letter from local mosque committee"
+    ],
+    "application_process_steps": [
+      "Step 1: Apply at local Union Council office.",
+      "Step 2: Submit required documents and poverty status verification.",
+      "Step 3: Receive Zakat assistance directly into your bank account."
+    ]
+  },
+  {
+    "service_id": "WTR-SPLY-006",
+    "service_name": "Urban Water Supply Connection",
+    "description": "Apply for new water supply connection in urban areas through Water and Sanitation Agency (WASA).",
+    "eligibility_criteria": {
+      "residency": "Urban household",
+      "citizenship_status": "Pakistani National"
+    },
+    "required_documents": [
+      "CNIC",
+      "Property ownership or rental agreement",
+      "Site map of the house"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit application at WASA office with documents.",
+      "Step 2: Inspection by WASA engineer.",
+      "Step 3: Pay connection fee and installation of pipeline."
+    ]
+  },
+  {
+    "service_id": "TRN-BUS-007",
+    "service_name": "Public Bus Concession Pass",
+    "description": "Discounted monthly bus passes for students and senior citizens.",
+    "eligibility_criteria": {
+      "age": {
+        "min": 15,
+        "max": 65
+      },
+      "status": [
+        "Student",
+        "Senior Citizen"
+      ],
+      "citizenship_status": "Pakistani National"
+    },
+    "required_documents": [
+      "CNIC or Form B",
+      "Student ID card (if applicable)",
+      "Passport size photographs"
+    ],
+    "application_process_steps": [
+      "Step 1: Visit the local bus terminal concession counter.",
+      "Step 2: Submit ID and application form.",
+      "Step 3: Collect concession card for monthly travel."
+    ]
+  },
+  {
+    "service_id": "EMR-AMB-008",
+    "service_name": "Rescue 1122 Ambulance Membership",
+    "description": "Subscription-based ambulance service for emergency medical support.",
+    "eligibility_criteria": {
+      "age": {
+        "min": 0,
+        "max": 100
+      },
+      "citizenship_status": "Pakistani National"
+    },
+    "required_documents": [
+      "CNIC",
+      "Medical history (if available)",
+      "Address proof (utility bill)"
+    ],
+    "application_process_steps": [
+      "Step 1: Register at Rescue 1122 office or online portal.",
+      "Step 2: Pay nominal membership fee.",
+      "Step 3: Receive membership card for priority ambulance service."
+    ]
+  },
+  {
+    "service_id": "HLT-VAC-009",
+    "service_name": "National Vaccination Drive",
+    "description": "Free vaccination services for children and adults under national immunization programs.",
+    "eligibility_criteria": {
+      "age": {
+        "min": 0,
+        "max": 60
+      },
+      "citizenship_status": "Pakistani National"
+    },
+    "required_documents": [
+      "Child Registration Certificate (Form B)",
+      "Vaccination card (if available)",
+      "CNIC of guardian"
+    ],
+    "application_process_steps": [
+      "Step 1: Visit nearest Basic Health Unit or vaccination center.",
+      "Step 2: Present documents for registration.",
+      "Step 3: Get vaccinated and receive updated vaccination card."
+    ]
+  },
+  {
+    "service_id": "AGR-SUB-010",
+    "service_name": "Agricultural Subsidy Program",
+    "description": "Subsidized fertilizers and seeds for small-scale farmers.",
+    "eligibility_criteria": {
+      "land_ownership": "Less than 12 acres",
+      "citizenship_status": "Pakistani National",
+      "occupation": "Farmer"
+    },
+    "required_documents": [
+      "CNIC",
+      "Land ownership record (Fard)",
+      "Farmer registration certificate"
+    ],
+    "application_process_steps": [
+      "Step 1: Apply at local Agriculture Department office.",
+      "Step 2: Submit CNIC and land record for verification.",
+      "Step 3: Collect vouchers for subsidized inputs."
+    ]
+  },
+  {
+    "service_id": "WLF-PEN-011",
+    "service_name": "Old Age Pension Scheme",
+    "description": "Monthly pension for senior citizens without other means of income.",
+    "eligibility_criteria": {
+      "age": {
+        "min": 60,
+        "max": 100
+      },
+      "citizenship_status": "Pakistani National",
+      "employment_status": "Unemployed/Retired"
+    },
+    "required_documents": [
+      "CNIC",
+      "Proof of no other pension/income source",
+      "Bank account details"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit application at Social Welfare Department.",
+      "Step 2: Provide necessary documents for verification.",
+      "Step 3: Pension deposited monthly into applicant’s account."
+    ]
+  },
+  {
+    "service_id": "TRP-DRV-012",
+    "service_name": "Driving License Issuance",
+    "description": "Issuance of learner, permanent, and international driving licenses.",
+    "eligibility_criteria": {
+      "age": {
+        "min": 18,
+        "max": 70
+      },
+      "citizenship_status": "Pakistani National"
+    },
+    "required_documents": [
+      "CNIC",
+      "Medical fitness certificate",
+      "Passport size photographs"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit learner license application at licensing center.",
+      "Step 2: Appear in driving test for permanent license.",
+      "Step 3: Collect license upon successful evaluation."
+    ]
+  },
+  {
+    "service_id": "HUS-MAR-013",
+    "service_name": "Marriage Registration Service",
+    "description": "Official registration of marriages under local Union Councils.",
+    "eligibility_criteria": {
+      "age": {
+        "min": 18,
+        "max": 70
+      },
+      "citizenship_status": "Pakistani National",
+      "marital_status": "Unmarried at the time of registration"
+    },
+    "required_documents": [
+      "CNIC of bride and groom",
+      "Nikah Nama (marriage contract)",
+      "Witness CNIC copies"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit Nikah Nama at local Union Council office.",
+      "Step 2: Verification of documents and witness identities.",
+      "Step 3: Receive official Marriage Registration Certificate."
+    ]
+  },
+  {
+    "service_id": "DIS-REL-014",
+    "service_name": "Disaster Relief Cash Grant",
+    "description": "Emergency financial aid for families affected by floods, earthquakes, or other natural disasters.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "disaster_affected_area": "Yes",
+      "family_status": "Displaced or property damaged"
+    },
+    "required_documents": [
+      "CNIC",
+      "Disaster-affected certificate from District Administration",
+      "Proof of residence in affected area"
+    ],
+    "application_process_steps": [
+      "Step 1: Register at the relief camp or online NADRA portal.",
+      "Step 2: Submit CNIC and proof of residence.",
+      "Step 3: Receive grant amount via Ehsaas Cash program or mobile wallet."
+    ]
+  },
+  {
+    "service_id": "UTL-ELC-015",
+    "service_name": "Electricity New Connection",
+    "description": "Apply for a new electricity connection through WAPDA/LESCO.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "property_status": "Owner or legal tenant"
+    },
+    "required_documents": [
+      "CNIC",
+      "Property ownership deed or rental agreement",
+      "Site map with meter installation point"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit application at the electricity distribution company office or online portal.",
+      "Step 2: Site inspection by engineer.",
+      "Step 3: Pay connection charges and receive new meter installation."
+    ]
+  },
+  {
+    "service_id": "UTL-GAS-016",
+    "service_name": "Sui Gas Connection Service",
+    "description": "New Sui Northern or Southern Gas connection for households.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "residency": "Residential property"
+    },
+    "required_documents": [
+      "CNIC",
+      "Property ownership documents",
+      "Recent utility bill for verification"
+    ],
+    "application_process_steps": [
+      "Step 1: Apply online or at SNGPL/SSGC office.",
+      "Step 2: Submit property ownership and CNIC details.",
+      "Step 3: Pay connection fee and pipeline installation is scheduled."
+    ]
+  },
+  {
+    "service_id": "FIN-MCR-017",
+    "service_name": "Microfinance Loan Program",
+    "description": "Low-interest loans for small businesses and women entrepreneurs.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "income_per_month_pkr": {
+        "max": 40000
+      },
+      "business_type": "Micro or small enterprise"
+    },
+    "required_documents": [
+      "CNIC",
+      "Business plan or shop license (if available)",
+      "Two guarantors' CNICs"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit loan application to microfinance bank.",
+      "Step 2: Provide guarantors and business plan.",
+      "Step 3: Loan disbursed upon approval into applicant’s bank account."
+    ]
+  },
+  {
+    "service_id": "WOM-EMP-018",
+    "service_name": "Women Empowerment Skill Program",
+    "description": "Free vocational training and stipends for women to learn income-generating skills.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "gender": "Female",
+      "age": {
+        "min": 16,
+        "max": 50
+      }
+    },
+    "required_documents": [
+      "CNIC",
+      "Domicile certificate",
+      "Guardian consent (if under 18)"
+    ],
+    "application_process_steps": [
+      "Step 1: Apply online or at local Women Development Department office.",
+      "Step 2: Attend orientation and submit documents.",
+      "Step 3: Begin training and receive monthly stipend."
+    ]
+  },
+  {
+    "service_id": "DIG-ID-019",
+    "service_name": "CNIC Renewal & Smart ID Upgrade",
+    "description": "Renew expired CNICs or upgrade to Smart National ID Card with chip.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "age": {
+        "min": 18,
+        "max": 70
+      }
+    },
+    "required_documents": [
+      "Expired CNIC",
+      "Domicile (for first-time smart ID upgrade)",
+      "Passport size photographs"
+    ],
+    "application_process_steps": [
+      "Step 1: Visit NADRA Registration Center.",
+      "Step 2: Submit biometric verification and required documents.",
+      "Step 3: Collect Smart CNIC after processing period."
+    ]
+  },
+  {
+    "service_id": "SCH-SHP-020",
+    "service_name": "Merit & Need-Based Scholarship Program",
+    "description": "Financial aid for university students on merit and need basis.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "education_level": "University student",
+      "family_income_per_month_pkr": {
+        "max": 50000
+      }
+    },
+    "required_documents": [
+      "CNIC/Form B",
+      "University enrollment letter",
+      "Income certificate of guardian"
+    ],
+    "application_process_steps": [
+      "Step 1: Apply through Higher Education Commission (HEC) portal.",
+      "Step 2: Submit required documents for verification.",
+      "Step 3: Scholarship awarded and fees adjusted in university account."
+    ]
+  },
+  {
+    "service_id": "HUS-BRF-021",
+    "service_name": "Birth Registration Service",
+    "description": "Official registration of newborns for issuance of Birth Certificate.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "age": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "required_documents": [
+      "Parent CNICs",
+      "Hospital birth slip or affidavit",
+      "Proof of residence"
+    ],
+    "application_process_steps": [
+      "Step 1: Visit local Union Council office with documents.",
+      "Step 2: Submit application form for child registration.",
+      "Step 3: Receive computerized Birth Certificate."
+    ]
+  },
+  {
+    "service_id": "HUS-DEF-022",
+    "service_name": "Death Registration Service",
+    "description": "Registration of deaths for issuance of death certificates.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "relation_to_deceased": "Immediate family member"
+    },
+    "required_documents": [
+      "CNIC of deceased",
+      "CNIC of applicant",
+      "Hospital death certificate"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit application at local Union Council office.",
+      "Step 2: Provide required documents.",
+      "Step 3: Collect official death certificate."
+    ]
+  },
+  {
+    "service_id": "TRN-MTR-023",
+    "service_name": "Metro Bus Smart Card Issuance",
+    "description": "Rechargeable smart card for daily commuters using metro bus services.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "residency": "Urban area with metro bus service"
+    },
+    "required_documents": [
+      "CNIC",
+      "Passport size photograph"
+    ],
+    "application_process_steps": [
+      "Step 1: Visit metro bus station ticket counter.",
+      "Step 2: Provide CNIC and photo for registration.",
+      "Step 3: Collect smart card and recharge for travel."
+    ]
+  },
+  {
+    "service_id": "EDU-DIG-024",
+    "service_name": "Digital Literacy Training Program",
+    "description": "Free government-sponsored training in basic IT skills for youth and adults.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "age": {
+        "min": 15,
+        "max": 45
+      }
+    },
+    "required_documents": [
+      "CNIC or Form B",
+      "Domicile certificate"
+    ],
+    "application_process_steps": [
+      "Step 1: Register online or at a designated IT training center.",
+      "Step 2: Attend orientation and submit documents.",
+      "Step 3: Begin digital literacy course."
+    ]
+  },
+  {
+    "service_id": "LAW-CRT-025",
+    "service_name": "E-Court Case Tracking Service",
+    "description": "Online tracking of ongoing court cases for transparency and efficiency.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "relation_to_case": [
+        "Petitioner",
+        "Respondent",
+        "Lawyer"
+      ]
+    },
+    "required_documents": [
+      "CNIC",
+      "Case registration number"
+    ],
+    "application_process_steps": [
+      "Step 1: Visit the e-court portal and log in with CNIC.",
+      "Step 2: Enter case registration number.",
+      "Step 3: View real-time case updates and hearing schedules."
+    ]
+  },
+  {
+    "service_id": "POL-CHR-026",
+    "service_name": "Police Character Certificate Issuance",
+    "description": "Provides official verification of character for employment, visas, or study abroad.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "age": {
+        "min": 18,
+        "max": 70
+      }
+    },
+    "required_documents": [
+      "CNIC",
+      "Passport copy",
+      "Two passport size photos"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit application at local police station or online police services portal.",
+      "Step 2: Background verification by police department.",
+      "Step 3: Collect character certificate within specified timeline."
+    ]
+  },
+  {
+    "service_id": "ENV-PER-027",
+    "service_name": "Environmental Clearance Permit",
+    "description": "Approval for setting up industrial or commercial projects while ensuring environmental safety.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "business_type": "Industrial/Commercial"
+    },
+    "required_documents": [
+      "CNIC",
+      "Business registration certificate",
+      "Environmental impact assessment report"
+    ],
+    "application_process_steps": [
+      "Step 1: Submit permit application to Environmental Protection Agency (EPA).",
+      "Step 2: Attach all required documents including impact assessment.",
+      "Step 3: Receive clearance or compliance requirements before project initiation."
+    ]
+  },
+  {
+    "service_id": "BUS-REG-028",
+    "service_name": "Small Business Registration Service",
+    "description": "Facilitates registration of small and medium enterprises (SMEs) with government authorities.",
+    "eligibility_criteria": {
+      "citizenship_status": "Pakistani National",
+      "business_type": "Small or Medium Enterprise"
+    },
+    "required_documents": [
+      "CNIC",
+      "Business plan or shop license",
+      "Proof of address (utility bill)"
+    ],
+    "application_process_steps": [
+      "Step 1: Apply online or at SECP regional office.",
+      "Step 2: Provide CNIC and business documents for verification.",
+      "Step 3: Receive SME registration certificate."
+    ]
+  }
+]
