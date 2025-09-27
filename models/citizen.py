@@ -2,17 +2,14 @@ from pydantic import BaseModel
 
 
 class Citizen(BaseModel):
+    cnic: str
     name: str
-    email: str
     dob: str
     district: str
     monthly_income: float
-    disability_status: bool = False
-    utility_ids: dict = {}
+    disability_status: bool
+    household_size: int
+    utility_customer_ids: dict
 
     class Config:
         orm_mode = True
-
-
-class CitizenInDB(Citizen):
-    id: str
