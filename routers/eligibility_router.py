@@ -7,7 +7,7 @@ router = APIRouter()
 
 @router.post("/check-eligibility")
 async def check_eligibility(citizen_data: Citizen):
-    orchestrator_agent = OrchestratorAgent(name="Orchestrator Agent")
+    orchestrator_agent = OrchestratorAgent()
     result = orchestrator_agent.orchestrate(citizen_data.dict())
 
     if result["eligibility"] == "Not Eligible":
@@ -15,4 +15,11 @@ async def check_eligibility(citizen_data: Citizen):
             status_code=400, detail="Not eligible for the requested services"
         )
 
-    return result
+    # Return the generated PDF if eligible
+    if result.get("form"):
+        return result["form"]  # This is the StreamingResponse containing the PDF
+    else:
+        return {
+            "eligibility": result["eligibility"],
+            "explanation": result["explanation"],
+        }
