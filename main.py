@@ -1,11 +1,22 @@
 from fastapi import FastAPI
-from routers import eligibility_router
+from pydantic import BaseModel
+from agent.orchestrator_agent import Orchestrator
 
 app = FastAPI()
 
-app.include_router(eligibility_router.router)
+
+class CitizenData(BaseModel):
+    citizen_id: str
+    first_name: str
+    last_name: str
+    age: int
+    income_per_month_pkr: int
+    housing_status: str
+    service_requested: str
 
 
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to the Citizen Service Navigator AI API!"}
+@app.post("/citizen-query/")
+async def citizen_query(citizen_data: CitizenData, is_offline: bool = False):
+    orchestrator = Orchestrator()
+    result = orchestrator.process_query(citizen_data.dict(), is_offline)
+    return result
