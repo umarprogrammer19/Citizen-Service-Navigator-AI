@@ -41,9 +41,6 @@ async def ask_agent(question_data):
 
     # Use Orchestrator Agent to process the query
     result = await Runner.run(
-        orchestrator_agent,
-        input=question_data,
-        citizen_data=citizen_data,
-        service_data=service_data,
+        orchestrator_agent, input=question_data, context=[citizen_data, service_data]
     )
     return result.final_output
