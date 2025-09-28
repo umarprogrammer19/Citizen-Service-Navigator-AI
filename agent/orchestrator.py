@@ -1,6 +1,6 @@
 from agents import Agent
 from agent.policy_retriever_agent import PolicyRetrieverAgent
-from agent.eligibility_evaluator_agent import EligibilityEvaluatorAgent
+from agent.eligibility_agent import EligibilityEvaluatorAgent
 from agent.form_filler_agent import FormFillerAgent
 from agent.explainer_agent import ExplainerAgent
 
