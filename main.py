@@ -33,13 +33,14 @@ class ServiceData(BaseModel):
 
 # Route to interact with the Orchestrator Agent
 @app.post("/ask-agent/")
-async def ask_agent(question_data: dict):
+async def ask_agent(question_data):
     # Fetch citizen and service data from MongoDB
-    citizen_data = get_citizen_data(question_data["citizen_id"])
-    service_data = get_service_data(question_data["service_id"])
+    citizen_data = get_citizen_data(question_data.citizen_data.citizen_id)
+
+    service_data = get_service_data(question_data.service_data.service_id)
 
     # Use Orchestrator Agent to process the query
-    result = await Runner.run_async(
+    result = await Runner.run(
         orchestrator_agent,
         input=question_data,
         citizen_data=citizen_data,

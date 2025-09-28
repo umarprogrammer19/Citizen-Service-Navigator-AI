@@ -1,6 +1,6 @@
 from agents import Agent
 from agent.eligibility_agent import eligibility_agent
-from agent.application_process import application_drafting_agent
+from agent.drafting_agent import application_drafting_agent
 from agent.explanation_agent import explanation_agent
 from config import model
 
