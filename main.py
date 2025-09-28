@@ -1,60 +1,21 @@
-# from fastapi import FastAPI
-# from pydantic import BaseModel
-# from agent.orchestrator_agent import Orchestrator
-
-# app = FastAPI()
-
-
-# # Citizen Data Schema
-# class CitizenData(BaseModel):
-#     citizen_id: str
-#     first_name: str
-#     last_name: str
-#     age: int
-#     income_per_month_pkr: int
-#     housing_status: str
-#     service_requested: str
-
-
-# # Service Data Schema
-# class ServiceData(BaseModel):
-#     service_id: str
-#     query_type: str  # Could be 'eligibility', 'documents', or 'application'
-
-
-# # Question Query Schema
-# class QuestionData(BaseModel):
-#     question: str
-#     citizen_data: CitizenData = None
-#     service_data: ServiceData = None
-#     is_offline: bool = False
-
-
-# @app.post("/ask-agent/")
-# async def ask_agent(question_data: QuestionData):
-#     orchestrator = Orchestrator()
-#     # Asynchronously process the question
-#     response = await orchestrator.process_question(
-#         question_data.question,
-#         citizen_data=(
-#             question_data.citizen_data.dict() if question_data.citizen_data else None
-#         ),
-#         service_data=(
-#             question_data.service_data.dict() if question_data.service_data else None
-#         ),
-#         is_offline=question_data.is_offline,
-#     )
-#     return response
-
 from fastapi import FastAPI
 from pydantic import BaseModel
-from agent.orchestrator_agent import Orchestrator
+from agent.orchestrator_agent import orchestrator_agent
+from pymongo import MongoClient
 from agents import Runner
+import os
+from database.mongo_connection import get_citizen_data, get_service_data
 
 app = FastAPI()
 
+# MongoDB Setup
+client = MongoClient(os.environ.get("MONGODB_URL"))
+db = client["citizen_service_db"]
+citizens_collection = db["citizens"]
+services_collection = db["services"]
 
-# Citizen Data Schema
+
+# Models
 class CitizenData(BaseModel):
     citizen_id: str
     first_name: str
@@ -65,36 +26,23 @@ class CitizenData(BaseModel):
     service_requested: str
 
 
-# Service Data Schema
 class ServiceData(BaseModel):
     service_id: str
-    query_type: str  # Could be 'eligibility', 'documents', or 'application'
+    query_type: str  # eligibility, documents, application
 
 
-# Question Query Schema
-class QuestionData(BaseModel):
-    question: str
-    citizen_data: CitizenData = None
-    service_data: ServiceData = None
-    is_offline: bool = False
-
-
+# Route to interact with the Orchestrator Agent
 @app.post("/ask-agent/")
-async def ask_agent(question_data: QuestionData):
-    orchestrator = Orchestrator()
-    # Asynchronously process the question
-    response = await Runner.run(
-        orchestrator,
-        question_data.question,
+async def ask_agent(question_data: dict):
+    # Fetch citizen and service data from MongoDB
+    citizen_data = get_citizen_data(question_data["citizen_id"])
+    service_data = get_service_data(question_data["service_id"])
+
+    # Use Orchestrator Agent to process the query
+    result = await Runner.run_async(
+        orchestrator_agent,
+        input=question_data,
+        citizen_data=citizen_data,
+        service_data=service_data,
     )
-    # response = await orchestrator.process_question(
-    #     question_data.question,
-    #     citizen_data=(
-    #         question_data.citizen_data.dict() if question_data.citizen_data else None
-    #     ),
-    #     service_data=(
-    #         question_data.service_data.dict() if question_data.service_data else None
-    #     ),
-    #     is_offline=question_data.is_offline,
-    # )
-    return response.final_output
+    return result.final_output
