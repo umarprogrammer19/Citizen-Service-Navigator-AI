@@ -14,20 +14,51 @@ class Orchestrator:
         self.explanation_agent = explanation_agent
         self.offline_agent = offline_mode_agent
 
-    def process_query(self, citizen_data: dict, is_offline=False):
-        if is_offline:
-            eligibility = self.offline_agent.run(citizen_data)
-        else:
-            eligibility = self.eligibility_agent.run(citizen_data)
+    def process_question(
+        self, question: str, citizen_data: dict = None, is_offline=False
+    ):
+        """Process the question asked by the citizen and direct it to the appropriate agent."""
+        if "eligible" in question.lower() or "eligibility" in question.lower():
+            # If the question is about eligibility
+            if citizen_data:
+                eligibility = self.eligibility_agent.run(citizen_data)
+                if eligibility:
+                    return {
+                        "status": "Eligible",
+                        "message": "You are eligible for the requested service.",
+                    }
+                else:
+                    return {
+                        "status": "Ineligible",
+                        "message": "You are not eligible for the requested service.",
+                    }
+            else:
+                return {"status": "Error", "message": "No citizen data provided."}
 
-        if eligibility:
-            application = self.drafting_agent.run(citizen_data)
-            guidance = self.guidance_agent.run(citizen_data)
+        elif "apply" in question.lower() or "application" in question.lower():
+            # If the question is about applying for a service
+            if citizen_data:
+                application = self.drafting_agent.run(citizen_data)
+                guidance = self.guidance_agent.run(citizen_data)
+                return {
+                    "status": "Eligible",
+                    "application": application,
+                    "guidance": guidance,
+                }
+            else:
+                return {"status": "Error", "message": "No citizen data provided."}
+
+        elif "documents" in question.lower():
+            # If the question is about required documents
             return {
-                "status": "Eligible",
-                "application": application,
-                "guidance": guidance,
+                "status": "Information",
+                "message": "Required documents: CNIC, recent utility bill, etc.",
             }
+
+        elif "offline" in question.lower():
+            # If the question is related to offline status
+            eligibility = self.offline_agent.run(citizen_data)
+            return {"status": "Offline Eligibility", "eligibility": eligibility}
+
         else:
-            explanation = self.explanation_agent.run(citizen_data)
-            return {"status": "Ineligible", "message": explanation}
+            return {"status": "Unknown", "message": "I don't understand the question."}
