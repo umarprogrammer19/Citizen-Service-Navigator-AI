@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from agents import function_tool
 import os
 
 MONGODB_URL = os.getenv("MONGODB_URL")
@@ -10,16 +11,16 @@ services_collection = db["services"]
 messages_collection = db["citizen_messages"]
 
 
-# Fetch citizen data based on citizen_id
+@function_tool
 def get_citizen_data(citizen_id: str):
     return citizens_collection.find_one({"citizen_id": citizen_id})
 
 
-# Fetch service data based on service_id
+@function_tool
 def get_service_data(service_id: str):
     return services_collection.find_one({"service_id": service_id})
 
 
-# Fetch citizen messages based on case_id
+@function_tool
 def get_citizen_messages(case_id: str):
     return messages_collection.find_one({"case_id": case_id})

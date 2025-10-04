@@ -6,7 +6,7 @@ application_process_agent = Agent(
     name="Application Process Agent",
     instructions="Provide the step-by-step application process for a service.",
     model=model,
-    tools=[get_service_data],  # Fetch service data to get application steps
+    tools=[get_service_data],
 )
 
 
