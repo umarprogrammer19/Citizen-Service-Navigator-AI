@@ -7,6 +7,6 @@ application_drafting_agent = Agent(
     instructions=(
         "You are an application assistant. Pre-fill the application form for a citizen based on the provided data."
     ),
-    model=model,  # Use OpenAI model to generate application form
+    model=model,  
     tools=[fetch_citizen_data],
 )
