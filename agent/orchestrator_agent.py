@@ -4,7 +4,6 @@ from agent.drafting_agent import application_drafting_agent
 from agent.explanation_agent import explanation_agent
 from config import model
 
-# Orchestrator Agent
 orchestrator_agent = Agent(
     name="Orchestrator",
     instructions="Orchestrates the citizen service process by invoking eligibility, application drafting, and explanation agents.",
