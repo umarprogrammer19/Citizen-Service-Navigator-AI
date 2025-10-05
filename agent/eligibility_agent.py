@@ -13,7 +13,6 @@ def check_eligibility(citizen_data, service_data):
     """
     eligibility_criteria = service_data["eligibility_criteria"]
 
-    # Check eligibility based on the criteria
     if (
         citizen_data["age"] >= eligibility_criteria["min_age"]
         and citizen_data["income_per_month_pkr"] <= eligibility_criteria["max_income"]
@@ -23,7 +22,6 @@ def check_eligibility(citizen_data, service_data):
         return {"eligible": False, "message": "You are not eligible for the service."}
 
 
-# Eligibility Agent
 eligibility_agent = Agent(
     name="Eligibility Agent",
     instructions="Determine if the citizen qualifies for a specific service based on their profile and the service's eligibility criteria.",
