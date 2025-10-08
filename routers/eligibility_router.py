@@ -17,7 +17,7 @@ async def check_eligibility(citizen_data: Citizen):
 
     # Return the generated PDF if eligible
     if result.get("form"):
-        return result["form"]  # This is the StreamingResponse containing the PDF
+        return result["form"]  
     else:
         return {
             "eligibility": result["eligibility"],
