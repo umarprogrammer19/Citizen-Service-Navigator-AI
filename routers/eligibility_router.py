@@ -4,7 +4,7 @@ from agent.orchestrator_agent import OrchestratorAgent
 
 router = APIRouter()
 
-
+# post request for checking the eligibility
 @router.post("/check-eligibility")
 async def check_eligibility(citizen_data: Citizen):
     orchestrator_agent = OrchestratorAgent()
