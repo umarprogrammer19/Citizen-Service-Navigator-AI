@@ -5,7 +5,6 @@ This guide explains how to set up your environment, make changes, and submit a h
 
 > This is a Python project managed with **[uv](https://docs.astral.sh/uv/)** (fast package/dependency manager). All commands below use `uv`.
 
----
 
 ## 📜 Code of Conduct
 We follow a **Contributor Code of Conduct** to keep this community open and welcoming. By participating, you agree to uphold it.
