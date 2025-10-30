@@ -9,7 +9,7 @@ router = APIRouter()
 async def check_eligibility(citizen_data: Citizen):
     orchestrator_agent = OrchestratorAgent()
     result = orchestrator_agent.orchestrate(citizen_data.dict())
-
+    # checking eligibility 
     if result["eligibility"] == "Not Eligible":
         raise HTTPException(
             status_code=400, detail="Not eligible for the requested services"
